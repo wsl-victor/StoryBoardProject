@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="VpH-H7-vJU">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation View Controller-->
+        <scene sceneID="WTc-jU-LGK">
+            <objects>
+                <navigationController id="VpH-H7-vJU" customClass="SBDNavigationViewController" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uId-lp-shs">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7hZ-ys-6y9" kind="relationship" relationship="rootViewController" id="BdY-LJ-vcf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="swo-8e-YZ3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1196" y="179"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="CP1-ll-Z6j">
+            <objects>
+                <viewController id="7hZ-ys-6y9" customClass="HomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5Rv-Xk-PeJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="cMq-Nv-BQe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mib-HT-jkR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bFd-tR-aK5">
+                                <color key="backgroundColor" red="0.28498125159999999" green="0.62943032600000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="e0r-vc-LKt"/>
+                                </constraints>
+                                <state key="normal" title="跳转到下一级">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ALc-zb-eXP" kind="show" id="Lgm-0C-3h5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0a-Zk-XkV">
+                                <color key="backgroundColor" red="0.28498125159999999" green="0.62943032600000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Ksv-Np-V8V"/>
+                                </constraints>
+                                <state key="normal" title="跨StoryBoard跳转">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="storyBoardVC:" destination="7hZ-ys-6y9" eventType="touchUpInside" id="PUK-NW-rXj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="bFd-tR-aK5" firstAttribute="leading" secondItem="mib-HT-jkR" secondAttribute="leading" constant="20" id="1nZ-zN-kXg"/>
+                            <constraint firstAttribute="trailing" secondItem="bFd-tR-aK5" secondAttribute="trailing" constant="20" id="5ki-g8-P35"/>
+                            <constraint firstItem="L0a-Zk-XkV" firstAttribute="top" secondItem="bFd-tR-aK5" secondAttribute="bottom" constant="20" id="9Mf-F8-CQK"/>
+                            <constraint firstAttribute="trailing" secondItem="L0a-Zk-XkV" secondAttribute="trailing" constant="20" id="GWy-ei-ovm"/>
+                            <constraint firstItem="bFd-tR-aK5" firstAttribute="top" secondItem="5Rv-Xk-PeJ" secondAttribute="bottom" constant="20" id="gF9-0G-tQh"/>
+                            <constraint firstItem="L0a-Zk-XkV" firstAttribute="leading" secondItem="mib-HT-jkR" secondAttribute="leading" constant="20" id="wfX-49-v8e"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Y7g-W9-8Nk"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K9X-mt-GTY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330.39999999999998" y="190.25487256371815"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dxn-8f-6e7">
+            <objects>
+                <viewController id="ALc-zb-eXP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cwb-Fh-5pX"/>
+                        <viewControllerLayoutGuide type="bottom" id="wGp-Ab-dnj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v5b-R9-g43">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.86116062410000005" green="1" blue="0.88536562190000001" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0NK-a1-s4Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="591" y="-554"/>
+        </scene>
+    </scenes>
+</document>
